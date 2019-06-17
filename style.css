@@ -44,20 +44,20 @@ h1 {
 
 .bucket {
   display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   width: 100%;
 }
 
 .choice-bucket {
   display: inline-block;
-  float: left;
-  margin: 0;
-  padding: 0;
+  float: none;
+  margin: 10;
+  padding: 10;
   width: 33.333333%;
 }
 
 .choice-bucket label {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 13px;
   margin: 15px 4%;
 }
@@ -90,9 +90,9 @@ h1 {
 /* Answer Div */
 #answers {
   margin: 60px 0;
-  background: #fff;
+  background: red;
   border-radius: 6px;
-  color: #713e94;
+  color: black;
   transition: 1s linear;
 }
 
@@ -108,11 +108,11 @@ h1 {
 
 
 .hide {
-  opacity: 0;
-  height: 0;
+  opacity: 30;
+  height: 100%;
 }
 
 .show {
-  opacity: 1;
+  opacity: 30;
   height: 100%;
 }
