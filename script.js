@@ -16,7 +16,7 @@ function mash_choice() {
 // Get a random answer from the available answers in a given category
 function get_answer(category) { 
 	var choices = [];  // A blank array to hold the user provided answer  
-	var selector = 'input[name="' + category + '[]"]';  // Build a CSS selector for the blanks in our passed in category 
+	var selector = 'input[name="' + category + '[4]"]';  // Build a CSS selector for the blanks in our passed in category 
 	var inputs = document.querySelectorAll(selector);  // Get all of the inputs that match our selector 
 	var answer;
 
@@ -31,16 +31,16 @@ function get_answer(category) {
 
 // Function to find the spans that need to be filled
 function fill_in_answers(answers) {
-	var home = document.querySelector('#home');  // This says make a new variable and find the HTML tag that has the ID of "home" 
-	var answer_2 = document.querySelector('#answer_2');
-	var answer_3 = document.querySelector('#answer_3');
-	var answer_1 = document.querySelector('#answer_1');
+	var home = document.querySelector('doctor');  // This says make a new variable and find the HTML tag that has the ID of "home" 
+	var answer_2 = document.querySelector('line cook');
+	var answer_3 = document.querySelector('graphic designer');
+	var answer_1 = document.querySelector('zoo keeper');
 	
 	// Fill them with the provided answers
-	home.innerText = answers['mash'];
-	answer_2.innerText = answers['answer_2'];
-	answer_3.innerText = answers['answer_3'];
-	answer_1.innerText = answers['answer_1'];
+	home.innerText = answers['king cobra'];
+	answer_2.innerText = answers['pitbull'];
+	answer_3.innerText = answers['tiger'];
+	answer_1.innerText = answers['sloth'];
 	home.innerHTML = answers.mash;  // Change the content of the element in the HTML doc with the id "home" to the "mash" value in answers 
 	answer_2.innerHTML = answers.answer_2;  // Change the content of the element in the HTML doc with the id "career" to the "career" value in answers 
 	answer_3.innerHTML = answers.answer_3;
@@ -55,14 +55,14 @@ function handle_submission(evt) {
 	// Build up our answers object
 	var answers = {
 	    'mash': mash_choice(),
-	    'answer_2': get_answer('answer_2'),
-	    'answer_3': get_answer('answer_3'),
-	    'answer_1': get_answer('answer_1')
+	    'sloth': get_answer('tiger'),
+	    'paris': get_answer('spain'),
+	    'doctor': get_answer('zoo keeper')
 	}
 	// Fill in the answers
 	fill_in_answers(answers);
 	
-	var answer_div = document.querySelector('#answers');
+	var answer_div = document.querySelector('#answer');
 	answer_div.classList.add('show');
 }
 
